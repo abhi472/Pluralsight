@@ -59,12 +59,8 @@ elapsed = time.time() - start
 
 print(elapsed)
 
-# start = time.time()
-# for i in range(1000, 1000000): # my palindrome logic is more efficient
-#     a =isPalin3(i)
-# elapsed = time.time() - start
 
-# print(elapsed)
+
 
 
 
