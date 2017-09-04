@@ -4,6 +4,7 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 import time
 
+
 def isPalin(x):
     if (type(x) != str):
         x = str(x)
@@ -22,9 +23,12 @@ def isPalin(x):
         return "single digit numbers can't be palindromes"
     return True
 
+
 def isPalin2(num):
-    if str(num)==str(num)[::-1]: return True
-    else: return False
+    if str(num) == str(num)[::-1]:
+        return True
+    else:
+        return False
 
 
 def isPalin3(num):
@@ -44,30 +48,33 @@ def isPalin3(num):
         return False
 
 
+# start = time.time()
+# for i in range(10000000, 10000002): # my palindrome logic is more efficient
+#     a =isPalin(i)
+# elapsed = time.time() - start
+#
+# print(elapsed)
+#
+#
+# start = time.time()
+# for i in range(10000000, 10000002): # my palindrome logic is more efficient in case of larger numbers
+#     a =isPalin2(i)
+# elapsed = time.time() - start
+#
+# print(elapsed)
+
+def checkLargestPalin():
+    a = 0
+    for i in reversed(range(100, 999)):
+        for j in reversed(range(100, 999)):
+            if (isPalin(i * j)):
+                if(a < i * j):
+                    a = i * j
+
+    return a
+
+
 start = time.time()
-for i in range(10000000, 10000002): # my palindrome logic is more efficient
-    a =isPalin(i)
+print(checkLargestPalin())
 elapsed = time.time() - start
-
 print(elapsed)
-
-
-start = time.time()
-for i in range(10000000, 10000002): # my palindrome logic is more efficient in case of larger numbers
-    a =isPalin2(i)
-elapsed = time.time() - start
-
-print(elapsed)
-
-
-
-
-
-
-
-
-
-
-
-
-
