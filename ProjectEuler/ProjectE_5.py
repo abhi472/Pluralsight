@@ -12,17 +12,9 @@ def isPrime(i):
                     return False
     return True
 
-# def getPrimeFactors(x):
-#     for i in range(2, int(x/2)):
-#         if(x == 1):
-#             break
-#         else :
-#             while(x % i == 0):
-
 def get_smallest_evenly_divisible(x):
     primeProduct = 1
     listNum = []
-    listComposite = []
     for i in range(2, x):
         if (isPrime(i)):
             primeProduct *= i
@@ -32,7 +24,6 @@ def get_smallest_evenly_divisible(x):
                 if((math.log(i,k).is_integer())) :
                     primeProduct *= k
                     break
-            listComposite.append(i)
     return primeProduct
 
 
@@ -40,5 +31,5 @@ def get_smallest_evenly_divisible(x):
 
 
 
-print(get_smallest_evenly_divisible(30))
+print(get_smallest_evenly_divisible(20))
 
