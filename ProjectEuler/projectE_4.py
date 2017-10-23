@@ -2,7 +2,7 @@
 #  numbers is 9009 = 91 × 99.
 #
 # Find the largest palindrome made from the product of two 3-digit numbers.
-import time
+from BeyondBasicFunctions.elapsed_time import get_elapsed_time as time
 
 def isPalin(x):
     if (type(x) != str):
@@ -72,8 +72,7 @@ def checkLargestPalin():
 
     return a
 
-
-start = time.time()
+t = time()
+t()
 print(checkLargestPalin())
-elapsed = time.time() - start
-print(elapsed)
+print(t())
