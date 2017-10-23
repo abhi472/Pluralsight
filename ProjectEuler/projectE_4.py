@@ -4,7 +4,6 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 import time
 
-
 def isPalin(x):
     if (type(x) != str):
         x = str(x)
